@@ -202,12 +202,18 @@ int readBlock(int blockNumber, byte arrayAddress[])
           return 4;//return "4" as error message
   }
   Serial.println("block was read");
-   for (int j=0 ; j<16 ; j++)//print the block contents
-         {
-          if (readbackblock[j] = "motif1") {
-          musicPlayer.playFullFile("track001.mp3");    
+   for (int j=0 ; j<16 ; j++){
+    if (readbackblock[j] = "motif1") {
+    musicPlayer.playFullFile("track000.mp3");    
     }
-         }
+    if (readbackblock[j] = "motif2") {
+    musicPlayer.playFullFile("track001.mp3");    
+    }
+     if (readbackblock[j] = "motif3") {
+    musicPlayer.playFullFile("track002.mp3"); 
+
+    }
+   }
     
 }
 
@@ -237,3 +243,4 @@ int readBlock(int blockNumber, byte arrayAddress[])
 //     entry.close();
 //   }
 //}
+
